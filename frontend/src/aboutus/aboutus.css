@@ -1,0 +1,167 @@
+.home {
+    text-align: center;
+  }
+  
+  .home-logo {
+    filter: brightness(0) invert(18%) sepia(50%) saturate(1000%) hue-rotate(210deg) brightness(25%) contrast(80%);
+    height: 40vmin;
+    pointer-events: none;
+    margin-top: 10%;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .home-logo {
+      animation: home-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .home-header {
+    background: linear-gradient(160deg, #000000, #10213d); /* Gradient background */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    animation: stars 3s infinite linear;
+  }
+  
+  .home-header::before {
+    background-image: radial-gradient(circle, rgb(244, 163, 255) 1px, transparent 1px);
+    background-size: 150px 150px;
+    opacity: 0.5;
+    animation-delay: 0s;
+  }
+  
+  @keyframes stars {
+    0% {
+      background-position: 0% 100%;
+      opacity: 0.1;
+    }
+    50% {
+      background-position: 50% 50%;
+      opacity: 0.4;
+    }
+    100% {
+      background-position: 100% 0%;
+      opacity: 0.1;
+    }
+  }
+  
+  
+  .home-link {
+    color: #61dafb;
+  }
+  
+  @keyframes home-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .title {
+    position: absolute;
+    letter-spacing: 0.1em;
+    justify-content: center;
+    align-items: center;
+    top: 70px; /* Adjust spacing from top */
+    white-space: nowrap; /* Keep the texts in a single line */
+    transform: translateX(-50%); /* Center horizontally */
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#414141, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    animation: title_fadeIn 1.5s ease-in forwards;
+  }
+  
+  .description {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 20px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    animation: title_fadeIn 1.5s ease-in forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes title_fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .btn {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 50px;
+    padding: 15px 30px;
+    font-size: 0.75em;
+    border-radius: 5px;
+    top: 50px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    animation: btn_fadeIn 1.5s ease-in forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes btn_fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .btn2 {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 50px;
+    padding: 15px 30px;
+    font-size: 0.75em;
+    border-radius: 5px;
+    top: 35px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+    animation: btn2_fadeIn 1.5s ease-in forwards;
+    animation-delay: 1.5s;
+  }
+  
+  @keyframes btn2_fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
