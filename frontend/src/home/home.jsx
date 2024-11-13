@@ -1,34 +1,21 @@
 import gear from '../assets/gear.png';
 import './home.css';
-import { Link } from 'react-router-dom';
 import { HStack, Button } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { IoIosLogIn } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
-import { motion } from "framer-motion";
-import Homeinit from './homeinit';
+import BlackScreenIn from '../components/global/transitionIn';
+import BlackScreenOut from '../components/global/transitionOut';
+import usePageTransition from '../components/global/usePageTransition';
 
 function Home() {
-  const blackBox = {
-    initial: {
-        height: "100vh",
-    },
-  };
-// For creating a black blank page with PrioQue in the middle when first loaded in
-const InitialTransition = () => {
-    return (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <motion.div
-            className="relative z-50 w-full bg-black"
-            initial="initial"
-            animate="animate"
-            variants={blackBox}
-          />      
-        </div>
-    );
-  }; 
+  const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
+
   return (
-    <motion.div exit={{ opacity: 0 }}>
+    <>
+      {isPageLoading && <BlackScreenIn />}
+      {isTransitioning && <BlackScreenOut />}
+
       <div className="home">
         <header className="home-header">
           <div>
@@ -42,13 +29,12 @@ const InitialTransition = () => {
               <Button className="btn" colorPalette={'green'} variant='outline'>SIGN UP <FaUserEdit /></Button>
             </div>
           </HStack>
-          <Link to="/aboutus">
-            <Button className="btn2" colorPalette={'purple'} variant='ghost'>ABOUT US <RiArrowRightLine /></Button>
-          </Link>
+          <Button className="btn2" colorPalette={'purple'} variant='ghost' onClick={() => handleNavigate('/aboutus')}>ABOUT US <RiArrowRightLine /></Button>
         </header>
       </div>
-    </motion.div> 
-    
+      
+      
+    </>
   );
 }
 

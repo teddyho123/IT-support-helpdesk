@@ -3,11 +3,18 @@ import { RiArrowLeftLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import { Button, List } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import BlackScreenIn from '../components/global/transitionIn';
+import BlackScreenOut from '../components/global/transitionOut';
+import usePageTransition from '../components/global/usePageTransition';
 
 
 function Aboutus() {
+    const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
+
     return (
-        <motion.div exit={{ opacity: 0 }}>
+      <>
+        {isPageLoading && <BlackScreenIn />}
+        {isTransitioning && <BlackScreenOut />}
             <div className="home">
                 <header className="home-header">
                     <div>
@@ -21,13 +28,11 @@ function Aboutus() {
                         <List.Item >Improve response times</List.Item>
                         <List.Item >User-friendly interface</List.Item>
                     </List.Root>
-                <Link to="/">
-                    <Button className="btn2" colorPalette={'purple'} variant='ghost'><RiArrowLeftLine />TAKE ME BACK</Button>
-                </Link>
-                
+                    <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={() => handleNavigate('/')}><RiArrowLeftLine />TAKE ME BACK</Button>
                 </header>
             </div>
-        </motion.div>
+        </>
+        
       
     );
   }

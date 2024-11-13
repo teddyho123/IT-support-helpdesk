@@ -1,6 +1,8 @@
 .home {
   text-align: center;
+  position: relative;
 }
+
 
 .home-logo {
   filter: brightness(0) invert(18%) sepia(50%) saturate(1000%) hue-rotate(210deg) brightness(25%) contrast(80%);
@@ -27,6 +29,7 @@
   color: white;
   position: relative;
   overflow: hidden;
+  z-index:1;
 }
 
 .home-header::before {
