@@ -11,18 +11,13 @@ import { CiSignpostDuo1 } from "react-icons/ci";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { LuPaintBucket } from "react-icons/lu";
 function Aboutus() {
-    const { isPageLoading, isTransitioning, handleNavigate, handleBack } = usePageTransition();
+    const { isPageLoading, isTransitioning, handleBack } = usePageTransition();
 
     return (
         <>
             {isPageLoading && <BlackScreenIn />}
             {isTransitioning && <BlackScreenOut />}
-            <Flex
-                direction="column"
-                minH="90vh"
-                justifyContent="space-between"
-                alignItems="center"
-                >
+            <Flex direction="column" minH="90vh" justifyContent="space-between" alignItems="center">
                 <div className="home">
                     <header className="home-header">
                         <div>
@@ -36,7 +31,7 @@ function Aboutus() {
                             <List.Item ><IoSpeedometerOutline /> Improve response times</List.Item>
                             <List.Item ><LuPaintBucket /> User-friendly interface</List.Item>
                         </List.Root>
-                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />TAKE ME BACK</Button>
+                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />GO BACK</Button>
                     </header>
                 </div>
             </Flex>

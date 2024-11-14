@@ -32,12 +32,12 @@ function Login() {
                                 <Field label="Password"><Input user_password="user_password"/></Field>
                                 <Button className="btn" type="submit" colorPalette='blue' variant='subtle' alignSelf="center">Log In</Button>   
                                 <HStack alignSelf="center" >
-                                    <Button className="btn" colorPalette='white' variant='outline' alignSelf="flex-start">Forgot Password?</Button>
+                                    <Button className="btn" colorPalette='white' variant='outline' alignSelf="flex-start" onClick={() => handleNavigate('/forgotpassword')}>Forgot Password?</Button>
                                     <Button className="btn" colorPalette='whiteAlpha' variant='outline' alignSelf="flex-start" onClick={() => handleNavigate('/signup')}>New User?</Button>                            
                                 </HStack>
                             </Fieldset.Content>
                         </Fieldset.Root>
-                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />TAKE ME BACK</Button>
+                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />GO BACK</Button>
                     </header>
                 </div>
             </Flex>

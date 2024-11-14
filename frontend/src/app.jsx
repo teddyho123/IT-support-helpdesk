@@ -6,6 +6,8 @@ import Landing from './routes/landing/landing.jsx';
 import Aboutus from './routes/aboutus/aboutus.jsx';
 import Login from './routes/login/login.jsx';
 import Signup from './routes/signup/signup.jsx';
+import ForgotPassword from './routes/forgotPassword/forgotPassword.jsx';
+import Home from './routes/home/home.jsx';
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
               <Route path="/aboutus" element={<Aboutus />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/forgotpassword" element={<ForgotPassword />} />
+              <Route path="/home" element={<Home />} />
           </Routes>
       </AnimatePresence>
     );
