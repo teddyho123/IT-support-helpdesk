@@ -27,8 +27,8 @@ function Login() {
                         </div>
 
                         <Fieldset.Root size="lg" maxW="md">
-                            <Fieldset.Content>
-                                <Field paddingTop='100px' label="User ID"><Input user_id="user_id"/></Field>
+                            <Fieldset.Content className='form'>
+                                <Field paddingTop='200px' label="User ID"><Input user_id="user_id"/></Field>
                                 <Field label="Password"><Input user_password="user_password"/></Field>
                                 <Button className="btn" type="submit" colorPalette='blue' variant='subtle' alignSelf="center">Log In</Button>   
                                 <HStack alignSelf="center" >

@@ -125,6 +125,7 @@
     }
     
     .btn {
+      color:#c0c0c0;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 0.75em;
       border-radius: 5px;
@@ -155,8 +156,17 @@
       animation: btn2_fadeIn 1.5s ease-in forwards;
       animation-delay: 1.5s;
     }
+
+    .form {
+      color:#839394;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
+      animation: title_fadeIn 1.5s ease-in forwards;
+      animation-delay: 0.5s;
+    }
     
-    @keyframes btn2_fadeIn {
+    @keyframes form_fadeIn {
       from {
         opacity: 0;
       }
