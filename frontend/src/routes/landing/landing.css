@@ -41,7 +41,7 @@
   height: 100%;
   background: transparent;
   pointer-events: none;
-  animation: stars 3s infinite linear;
+  animation: stars 2s infinite linear;
 }
 
 .home-header::before {
@@ -54,11 +54,11 @@
 @keyframes stars {
   0% {
     background-position: 0% 100%;
-    opacity: 0.1;
+    opacity: 0.2;
   }
   50% {
     background-position: 50% 50%;
-    opacity: 0.4;
+    opacity: 0.5;
   }
   100% {
     background-position: 100% 0%;

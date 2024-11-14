@@ -1,5 +1,5 @@
 import gear from '../../assets/gear.png';
-import './home.css';
+import './landing.css';
 import { HStack, Button } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { IoIosLogIn } from "react-icons/io";
@@ -8,7 +8,7 @@ import BlackScreenIn from '../../components/global/transitionIn';
 import BlackScreenOut from '../../components/global/transitionOut';
 import usePageTransition from '../../components/global/usePageTransition';
 
-function Home() {
+function Landing() {
   const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
 
   return (
@@ -25,8 +25,8 @@ function Home() {
           <img src={gear} className="home-logo" alt="logo" />
           <HStack>
             <div>
-              <Button className="btn" colorPalette={'cyan'} variant='outline'>LOG IN <IoIosLogIn /></Button>
-              <Button className="btn" colorPalette={'green'} variant='outline'>SIGN UP <FaUserEdit /></Button>
+              <Button className="btn" colorPalette={'cyan'} variant='outline' onClick={() => handleNavigate('/login')}>LOG IN <IoIosLogIn /></Button>
+              <Button className="btn" colorPalette={'green'} variant='outline' onClick={() => handleNavigate('/signup')}>SIGN UP <FaUserEdit /></Button>
             </div>
           </HStack>
           <Button className="btn2" colorPalette={'purple'} variant='ghost' onClick={() => handleNavigate('/aboutus')}>ABOUT US <RiArrowRightLine /></Button>
@@ -38,4 +38,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Landing;
