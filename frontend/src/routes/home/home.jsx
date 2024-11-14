@@ -1,12 +1,12 @@
-import gear from '../assets/gear.png';
+import gear from '../../assets/gear.png';
 import './home.css';
 import { HStack, Button } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { IoIosLogIn } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
-import BlackScreenIn from '../components/global/transitionIn';
-import BlackScreenOut from '../components/global/transitionOut';
-import usePageTransition from '../components/global/usePageTransition';
+import BlackScreenIn from '../../components/global/transitionIn';
+import BlackScreenOut from '../../components/global/transitionOut';
+import usePageTransition from '../../components/global/usePageTransition';
 
 function Home() {
   const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();

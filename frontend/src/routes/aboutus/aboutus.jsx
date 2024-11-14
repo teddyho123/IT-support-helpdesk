@@ -1,12 +1,9 @@
 import './aboutus.css';
 import { RiArrowLeftLine } from "react-icons/ri";
-import { Link } from 'react-router-dom';
 import { Button, List } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import BlackScreenIn from '../components/global/transitionIn';
-import BlackScreenOut from '../components/global/transitionOut';
-import usePageTransition from '../components/global/usePageTransition';
-
+import BlackScreenIn from '../../components/global/transitionIn';
+import BlackScreenOut from '../../components/global/transitionOut';
+import usePageTransition from '../../components/global/usePageTransition';
 
 function Aboutus() {
     const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
