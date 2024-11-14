@@ -1,0 +1,1 @@
+import prevPage from '../../components/global/previousPage';

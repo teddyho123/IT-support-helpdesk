@@ -1,33 +1,46 @@
 import './aboutus.css';
 import { RiArrowLeftLine } from "react-icons/ri";
-import { Button, List } from "@chakra-ui/react";
+import { Button, List, Flex } from "@chakra-ui/react";
 import BlackScreenIn from '../../components/global/transitionIn';
 import BlackScreenOut from '../../components/global/transitionOut';
 import usePageTransition from '../../components/global/usePageTransition';
-
+import { GrSystem } from "react-icons/gr";
+import { DiStreamline } from "react-icons/di";
+import { MdLowPriority } from "react-icons/md";
+import { CiSignpostDuo1 } from "react-icons/ci";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { LuPaintBucket } from "react-icons/lu";
+import prevPage from '../../components/global/previousPage';
 function Aboutus() {
     const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
 
     return (
-      <>
-        {isPageLoading && <BlackScreenIn />}
-        {isTransitioning && <BlackScreenOut />}
-            <div className="home">
-                <header className="home-header">
-                    <div>
-                        <h1 className="title">Why use PrioQue?</h1>
-                    </div>
-                    <List.Root gap="5" variant="plain" color="gray">
-                        <List.Item >A powerful priority queue ticketing system</List.Item>
-                        <List.Item >Streamline issue management and boost team efficiency</List.Item>
-                        <List.Item >Helps support teams prioritize urgent tickets</List.Item>
-                        <List.Item >Collaborate in real-time</List.Item>
-                        <List.Item >Improve response times</List.Item>
-                        <List.Item >User-friendly interface</List.Item>
-                    </List.Root>
-                    <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={() => handleNavigate('/')}><RiArrowLeftLine />TAKE ME BACK</Button>
-                </header>
-            </div>
+        <>
+            {isPageLoading && <BlackScreenIn />}
+            {isTransitioning && <BlackScreenOut />}
+            <Flex
+                direction="column"
+                minH="90vh"
+                justifyContent="space-between"
+                alignItems="center"
+                >
+                <div className="home">
+                    <header className="home-header">
+                        <div>
+                            <h1 className="title">Why Use PrioQue?</h1>
+                        </div>
+                        <List.Root gap="5" variant="plain" color="gray">
+                            <List.Item ><GrSystem /> A powerful priority queue ticketing system</List.Item>
+                            <List.Item ><DiStreamline /> Streamline issue management and boost team efficiency</List.Item>
+                            <List.Item ><MdLowPriority /> Helps support teams prioritize urgent tickets</List.Item>
+                            <List.Item ><CiSignpostDuo1 /> Collaborate in real-time</List.Item>
+                            <List.Item ><IoSpeedometerOutline /> Improve response times</List.Item>
+                            <List.Item ><LuPaintBucket /> User-friendly interface</List.Item>
+                        </List.Root>
+                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={prevPage()}><RiArrowLeftLine />TAKE ME BACK</Button>
+                    </header>
+                </div>
+            </Flex>
         </>
         
       
