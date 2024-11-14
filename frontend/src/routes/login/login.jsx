@@ -5,10 +5,10 @@ import { Field } from "../../components/ui/field"
 import BlackScreenScaleIn from '../../components/global/transitionScaleIn';
 import BlackScreenScaleOut from '../../components/global/transitionScaleOut';
 import usePageTransition from '../../components/global/usePageTransition';
-import prevPage from '../../components/global/previousPage';
+
 
 function Login() {
-    const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
+    const { isPageLoading, isTransitioning, handleNavigate, handleBack } = usePageTransition();
 
     return (
         <>
@@ -37,7 +37,7 @@ function Login() {
                                 </HStack>
                             </Fieldset.Content>
                         </Fieldset.Root>
-                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={prevPage()}><RiArrowLeftLine />TAKE ME BACK</Button>
+                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />TAKE ME BACK</Button>
                     </header>
                 </div>
             </Flex>

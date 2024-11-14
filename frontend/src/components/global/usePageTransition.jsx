@@ -25,10 +25,20 @@ function usePageTransition() {
     return () => clearTimeout(timer); // Clean up timeout on component unmount
   };
 
+  const handleBack = () => {
+    setIsTransitioning(true);
+    const timer = setTimeout(() => {
+      window.history.back();
+    }, 500); // Delay matches the BlackScreenScaleOut animation
+
+    return () => clearTimeout(timer);
+  };
+
   return {
     isPageLoading,
     isTransitioning,
     handleNavigate,
+    handleBack,
   };
 }
 

@@ -10,9 +10,8 @@ import { MdLowPriority } from "react-icons/md";
 import { CiSignpostDuo1 } from "react-icons/ci";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { LuPaintBucket } from "react-icons/lu";
-import prevPage from '../../components/global/previousPage';
 function Aboutus() {
-    const { isPageLoading, isTransitioning, handleNavigate } = usePageTransition();
+    const { isPageLoading, isTransitioning, handleNavigate, handleBack } = usePageTransition();
 
     return (
         <>
@@ -37,7 +36,7 @@ function Aboutus() {
                             <List.Item ><IoSpeedometerOutline /> Improve response times</List.Item>
                             <List.Item ><LuPaintBucket /> User-friendly interface</List.Item>
                         </List.Root>
-                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={prevPage()}><RiArrowLeftLine />TAKE ME BACK</Button>
+                        <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />TAKE ME BACK</Button>
                     </header>
                 </div>
             </Flex>
