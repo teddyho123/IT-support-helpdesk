@@ -33,12 +33,12 @@ function BlackScreenIn() {
       bg="black"
       zIndex="9999"
       animationDelay="1.5s"
-      animation={`${minimizeHeight} 0.75s ease-in-out 0.35s forwards`}
+      animation={`${minimizeHeight} 0.5s ease-in-out 0.25s forwards`}
       display="flex"
       alignItems="center"
       justifyContent="center"
       >
-      <Text color="white" fontSize="6xl" fontWeight="bold" animation={`${fadeOut} 0.75s ease-in-out 0.2s forwards`}>
+      <Text color="white" fontSize="6xl" fontWeight="bold" animation={`${fadeOut} 0.5s ease-in-out 0.15s forwards`}>
         PrioQue
       </Text>
     </Box>

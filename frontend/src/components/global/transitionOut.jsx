@@ -35,12 +35,12 @@ function BlackScreenOut() {
       height="0vh"
       bg="black"
       zIndex="9999"
-      animation={`${maximizeHeight} 0.75s ease-in-out forwards`}
+      animation={`${maximizeHeight} 0.5s ease-in-out forwards`}
       display="flex"
       alignItems="center"
       justifyContent="center"
       >
-      <Text color="white" fontSize="6xl" fontWeight="bold" animation={`${fadeIn} 0.75s ease-in-out forwards`}>
+      <Text color="white" fontSize="6xl" fontWeight="bold" animation={`${fadeIn} 0.5s ease-in-out forwards`}>
         PrioQue
       </Text>
     </Box>

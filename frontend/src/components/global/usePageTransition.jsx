@@ -10,7 +10,7 @@ function usePageTransition() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPageLoading(false);
-    }, 1500); // Duration matches the BlackScreenIn animation
+    }, 1000); // Duration matches the BlackScreenIn animation
 
     return () => clearTimeout(timer); // Clean up timeout on component unmount
   }, []);
@@ -20,7 +20,7 @@ function usePageTransition() {
     setIsTransitioning(true);
     const timer = setTimeout(() => {
       navigate(path);
-    }, 700); // Duration matches the BlackScreenOut animation
+    }, 500); // Duration matches the BlackScreenOut animation
 
     return () => clearTimeout(timer); // Clean up timeout on component unmount
   };
