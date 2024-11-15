@@ -24,6 +24,7 @@ function ForgotPassword() {
                     <header className="home-header">
                         <div>
                             <h1 className="title">Oopsies</h1>
+                            <p className='description'>An email will be sent to your email address to reset your password</p>
                         </div>
                         <Fieldset.Root size="lg" maxW="md">
                             <Fieldset.Content className='form'>
