@@ -30,7 +30,7 @@ function Login() {
                             <Fieldset.Content className='form'>
                                 <Field paddingTop='200px' label="Email Address / User ID"><Input user_id="user_id"/></Field>
                                 <Field label="Password"><Input user_password="user_password"/></Field>
-                                <Button className="btn" type="submit" colorPalette='blue' variant='subtle' alignSelf="center">Log In</Button>   
+                                <Button className="btn" type="submit" colorPalette='blue' variant='subtle' alignSelf="center" onClick={() => handleNavigate('/home')}>Log In</Button>   
                                 <HStack alignSelf="center" >
                                     <Button className="btn" colorPalette='white' variant='outline' alignSelf="flex-start" onClick={() => handleNavigate('/forgotpassword')}>Forgot Password?</Button>
                                     <Button className="btn" colorPalette='whiteAlpha' variant='outline' alignSelf="flex-start" onClick={() => handleNavigate('/signup')}>New User?</Button>                            

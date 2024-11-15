@@ -21,7 +21,7 @@ function BlackScreenFadeOut() {
       height="100vh"
       bg="black"
       zIndex="9999"
-      animation={`${fadeIn} 1.5s ease-in-out forwards`}
+      animation={`${fadeIn} 0.5s ease-in-out forwards`}
       display="flex"
       alignItems="center"
       justifyContent="center"
