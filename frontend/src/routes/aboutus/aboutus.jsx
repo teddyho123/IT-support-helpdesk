@@ -1,6 +1,6 @@
 import './aboutus.css';
 import { RiArrowLeftLine } from "react-icons/ri";
-import { Button, List, Flex } from "@chakra-ui/react";
+import { Button, List, Flex, HStack } from "@chakra-ui/react";
 import BlackScreenIn from '../../components/global/transitionIn';
 import BlackScreenOut from '../../components/global/transitionOut';
 import usePageTransition from '../../components/global/usePageTransition';
@@ -24,12 +24,12 @@ function Aboutus() {
                             <h1 className="title">Why Use PrioQue?</h1>
                         </div>
                         <List.Root gap="5" variant="plain" color="gray">
-                            <List.Item ><GrSystem /> A powerful priority queue ticketing system</List.Item>
-                            <List.Item ><DiStreamline /> Streamline issue management and boost team efficiency</List.Item>
-                            <List.Item ><MdLowPriority /> Helps support teams prioritize urgent tickets</List.Item>
-                            <List.Item ><CiSignpostDuo1 /> Collaborate in real-time</List.Item>
-                            <List.Item ><IoSpeedometerOutline /> Improve response times</List.Item>
-                            <List.Item ><LuPaintBucket /> User-friendly interface</List.Item>
+                            <List.Item ><HStack><GrSystem /> A powerful priority queue ticketing system</HStack></List.Item>
+                            <List.Item ><HStack><DiStreamline /> Streamline issue management and boost team efficiency</HStack></List.Item>
+                            <List.Item ><HStack><MdLowPriority /> Helps support teams prioritize urgent tickets</HStack></List.Item>
+                            <List.Item ><HStack><CiSignpostDuo1 /> Collaborate in real-time</HStack></List.Item>
+                            <List.Item ><HStack><IoSpeedometerOutline /> Improve response times</HStack></List.Item>
+                            <List.Item ><HStack><LuPaintBucket /> User-friendly interface</HStack></List.Item>
                         </List.Root>
                         <Button className="btn2" colorPalette={'pink'} variant='ghost' onClick={handleBack}><RiArrowLeftLine />GO BACK</Button>
                     </header>
