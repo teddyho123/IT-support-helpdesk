@@ -8,7 +8,9 @@ import Login from './routes/login/login.jsx';
 import Signup from './routes/signup/signup.jsx';
 import ForgotPassword from './routes/forgotPassword/forgotPassword.jsx';
 import Home from './routes/home/home.jsx';
-
+import Tasks from './routes/tasks/tasks.jsx';
+import Profile from './routes/profile/profile.jsx';
+import Settings from './routes/settings/settings.jsx';
 function App() {
 
     const location = useLocation();
@@ -22,6 +24,9 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgotpassword" element={<ForgotPassword />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/tasks" element={<Tasks />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
           </Routes>
       </AnimatePresence>
     );
