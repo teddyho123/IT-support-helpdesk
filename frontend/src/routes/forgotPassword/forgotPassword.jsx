@@ -1,6 +1,6 @@
 import './forgotPassword.css';
 import { RiArrowLeftLine } from "react-icons/ri";
-import { Button, Input, Fieldset, HStack, Flex } from "@chakra-ui/react";
+import { Button, Input, Fieldset, Flex } from "@chakra-ui/react";
 import { Field } from "../../components/ui/field"
 import BlackScreenScaleIn from '../../components/global/transitionScaleIn';
 import BlackScreenScaleOut from '../../components/global/transitionScaleOut';
@@ -8,7 +8,7 @@ import usePageTransition from '../../components/global/usePageTransition';
 
 
 function ForgotPassword() {
-    const { isPageLoading, isTransitioning, handleNavigate, handleBack } = usePageTransition();
+    const { isPageLoading, isTransitioning, handleBack } = usePageTransition();
 
     return (
         <>
@@ -20,8 +20,8 @@ function ForgotPassword() {
                 justifyContent="space-between"
                 alignItems="center"
                 >
-                <div className="home">
-                    <header className="home-header">
+                <div className="forgotpassword">
+                    <header className="forgotpassword-header">
                         <div>
                             <h1 className="title">Oopsies</h1>
                             <p className='description'>An email will be sent to your email address to reset your password</p>

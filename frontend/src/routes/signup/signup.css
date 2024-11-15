@@ -1,4 +1,4 @@
-.home {
+.signup {
   text-align: center;
   position: relative;
   z-index: 0;
@@ -8,7 +8,7 @@
   z-index: 1;
 }
   
-  .home-logo {
+  .signup-logo {
     filter: brightness(0) invert(18%) sepia(50%) saturate(1000%) hue-rotate(210deg) brightness(25%) contrast(80%);
     height: 40vmin;
     pointer-events: none;
@@ -16,13 +16,13 @@
   }
   
   @media (prefers-reduced-motion: no-preference) {
-    .home-logo {
-      animation: home-logo-spin infinite 20s linear;
+    .signup-logo {
+      animation: signup-logo-spin infinite 20s linear;
     }
   }
   
-  .home-header {
-    background: linear-gradient(160deg, #000000, #10213d); /* Gradient background */
+  .signup-header {
+    background: linear-gradient(160deg, #000000, #1d1d1d); /* Gradient background */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -36,7 +36,7 @@
     z-index:1;
   }
   
-  .home-header::before {
+  .signup-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -48,7 +48,7 @@
     animation: stars 2s infinite linear;
   }
   
-  .home-header::before {
+  .signup-header::before {
     background-image: radial-gradient(circle, rgb(244, 163, 255) 1px, transparent 1px);
     background-size: 150px 150px;
     opacity: 0.5;
@@ -71,11 +71,11 @@
   }
   
   
-  .home-link {
+  .signup-link {
     color: #61dafb;
   }
   
-  @keyframes home-logo-spin {
+  @keyframes signup-logo-spin {
     from {
       transform: rotate(0deg);
     }

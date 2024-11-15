@@ -20,8 +20,8 @@ function Login() {
                 justifyContent="space-between"
                 alignItems="center"
                 >
-                <div className="home">
-                    <header className="home-header">
+                <div className="login">
+                    <header className="login-header">
                         <div>
                             <h1 className="title">Welcome Back!</h1>
                         </div>

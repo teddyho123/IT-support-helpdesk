@@ -1,13 +1,13 @@
 import './signup.css';
 import { RiArrowLeftLine } from "react-icons/ri";
-import { Button, Input, Fieldset, HStack, Flex } from "@chakra-ui/react";
+import { Button, Input, Fieldset, Flex } from "@chakra-ui/react";
 import { Field } from "../../components/ui/field"
 import BlackScreenScaleIn from '../../components/global/transitionScaleIn';
 import BlackScreenScaleOut from '../../components/global/transitionScaleOut';
 import usePageTransition from '../../components/global/usePageTransition';
 
 function Signup() {
-    const { isPageLoading, isTransitioning, handleNavigate, handleBack } = usePageTransition();
+    const { isPageLoading, isTransitioning, handleBack } = usePageTransition();
 
     return (
         <>
@@ -19,8 +19,8 @@ function Signup() {
                 justifyContent="space-between"
                 alignItems="center"
                 >
-                <div className="home">
-                    <header className="home-header">
+                <div className="signup">
+                    <header className="signup-header">
                         <div>
                             <h1 className="title">Create An Account</h1>
                         </div>

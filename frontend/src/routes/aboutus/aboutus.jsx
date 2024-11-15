@@ -18,8 +18,8 @@ function Aboutus() {
             {isPageLoading && <BlackScreenIn />}
             {isTransitioning && <BlackScreenOut />}
             <Flex direction="column" minH="90vh" justifyContent="space-between" alignItems="center">
-                <div className="home">
-                    <header className="home-header">
+                <div className="aboutus">
+                    <header className="aboutus-header">
                         <div>
                             <h1 className="title">Why Use PrioQue?</h1>
                         </div>

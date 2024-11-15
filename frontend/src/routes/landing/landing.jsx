@@ -21,13 +21,13 @@ function Landing() {
             justifyContent="space-between"
             alignItems="center"
             >
-            <div className="home">
-              <header className="home-header">
+            <div className="landing">
+              <header className="landing-header">
                 <div>
                   <h1 className="title"> Welcome to PrioQue</h1>
                   <p className="description">Your task organizing solution</p>
                 </div>
-                <img src={gear} className="home-logo" alt="logo" />
+                <img src={gear} className="landing-logo" alt="logo" />
                 <HStack>
                   <div>
                     <Button className="btn" colorPalette={'cyan'} variant='outline' onClick={() => handleNavigate('/login')}>LOG IN <IoIosLogIn /></Button>
