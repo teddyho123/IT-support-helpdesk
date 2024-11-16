@@ -1,10 +1,10 @@
 import './home.css';
-import { Button, Flex, Box} from "@chakra-ui/react";
-import { EmptyState } from "../../components/ui/empty-state"
-import { MdOutlineLibraryAdd } from "react-icons/md";
+import { Flex, Box, GridItem, Grid } from "@chakra-ui/react";
 import BlackScreenFadeIn from '../../components/global/transitionFadeIn';
 import usePageTransition from '../../components/global/usePageTransition';
 import Navbar from '../../components/Navbar/navbar';
+import HomeEmptyState from './homeEmptyState';
+import DecorativeBox from './decorativeBox';
 function Home() {
   const { isPageLoading } = usePageTransition();
 
@@ -14,14 +14,27 @@ function Home() {
       
       <Flex className='home' direction="column" height="100vh">
         <Navbar/>
-        <Box flex="1" p={8} alignContent='center' justifyItems='center'>
-          <EmptyState
-            icon={<MdOutlineLibraryAdd color="darkgray"/>}
-            title="Your queue is empty!"
-            description="Add new tasks to get busy"
-          >
-            <Button>Create Task</Button>
-          </EmptyState>
+        <Box flex="1" p={8} alignContent='flex-start' justifyItems='flex-start'>
+        <Grid h="200px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
+          <GridItem rowSpan={2} colSpan={1}>
+            <DecorativeBox>rowSpan=2</DecorativeBox>
+          </GridItem>
+          <GridItem colSpan={2}>
+            <DecorativeBox>colSpan=2</DecorativeBox>
+          </GridItem>
+          <GridItem colSpan={2}>
+            <DecorativeBox>colSpan=2</DecorativeBox>
+          </GridItem>
+          <GridItem colSpan={4}>
+            <DecorativeBox>colSpan=4</DecorativeBox>
+          </GridItem>
+        </Grid>
+
+
+          <HomeEmptyState/>
+
+
+
         </Box>
       </Flex>
     </>

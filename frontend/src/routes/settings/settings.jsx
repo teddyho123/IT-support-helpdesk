@@ -1,5 +1,5 @@
 import './settings.css';
-import { Box, Flex, HStack, Text, Separator, Icon } from "@chakra-ui/react";
+import { Box, Flex, Text, Separator } from "@chakra-ui/react";
 import BlackScreenFadeIn from '../../components/global/transitionFadeIn';
 import usePageTransition from '../../components/global/usePageTransition';
 import Navbar from '../../components/Navbar/navbar';
