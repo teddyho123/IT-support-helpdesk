@@ -12,7 +12,7 @@ function Tasks() {
     <>
       {isPageLoading && <BlackScreenFadeIn />}
       
-      <Flex className='home' direction="column" height="100vh">
+      <Flex className='tasks' direction="column" height="100vh">
         <Navbar/>
         <Box flex="1" p={8} alignContent='center' justifyItems='center'>
           <EmptyState

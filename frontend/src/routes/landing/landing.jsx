@@ -24,7 +24,7 @@ function Landing() {
             <div className="landing">
               <header className="landing-header">
                 <div>
-                  <h1 className="title"> Welcome to PrioQue</h1>
+                  <h1 className="title">PrioQue</h1>
                   <p className="description">Your task organizing solution</p>
                 </div>
                 <img src={gear} className="landing-logo" alt="logo" />
