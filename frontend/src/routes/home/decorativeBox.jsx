@@ -1,9 +1,9 @@
 import React from 'react';
 
-const DecorativeBox = () => {
+const DecorativeBox = ({ children }) => {
   return (
     <div style={{ border: '2px solid black', padding: '20px' }}>
-      This is a Decorative Box.
+      {children}
     </div>
   );
 };

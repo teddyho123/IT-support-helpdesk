@@ -1,6 +1,6 @@
 import './tasks.css';
 import { Button, Flex, Box} from "@chakra-ui/react";
-import { EmptyState } from "../../components/ui/empty-state"
+import {EmptyState} from "../../components/ui/empty-state";
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import BlackScreenFadeIn from '../../components/global/transitionFadeIn';
 import usePageTransition from '../../components/global/usePageTransition';
