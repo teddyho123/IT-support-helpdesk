@@ -30,8 +30,8 @@ function Menu() {
                 <MenuContent>
                     <MenuItem value="home" onClick={currentPath === '/home' ? undefined : () => handleNavigate('/home')} disabled={currentPath === '/home'}><IoHomeOutline />Home</MenuItem>
                     <MenuItem value="your_tasks" onClick={currentPath === '/tasks' ? undefined : () => handleNavigate('/tasks')} disabled={currentPath === '/tasks'}><FaTasks />Your Tasks</MenuItem>
-                    <MenuItem value="profile" onClick={currentPath === '/profile' ? undefined : () => handleNavigate('/profile')} disabled={currentPath === '/profile'}><CgProfile />Profile</MenuItem>
                     <MenuItem value="settings" onClick={currentPath === '/settings' ? undefined : () => handleNavigate('/settings')} disabled={currentPath === '/settings'}><IoMdSettings />Settings</MenuItem>
+                    <MenuItem value="profile" onClick={currentPath === '/profile' ? undefined : () => handleNavigate('/profile')} disabled={currentPath === '/profile'}><CgProfile />Profile</MenuItem>
                 </MenuContent>
             </MenuRoot>
         </>

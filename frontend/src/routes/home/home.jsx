@@ -1,42 +1,49 @@
 import './home.css';
-import { Flex, Box, GridItem, Grid } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import BlackScreenFadeIn from '../../components/global/transitionFadeIn';
 import usePageTransition from '../../components/global/usePageTransition';
 import Navbar from '../../components/Navbar/navbar';
 import DecorativeBox from './decorativeBox';
 import TaskList from './taskList';
+
 function Home() {
   const { isPageLoading } = usePageTransition();
 
   return (
     <>
       {isPageLoading && <BlackScreenFadeIn />}
-      
-      <Flex className='home' direction="column" height="100vh">
-        <Navbar/>
-        <Box flex="1" p={8} alignContent='flex-start' justifyItems='flex-start'>
-        <Grid w="100%" h="80%" templateRows="repeat(4, 1fr)" templateColumns="repeat(8, 1fr)" gap={4}>
-          <GridItem rowSpan={25} colSpan={2}>
+
+      <Box className="home" height="100vh">
+        <Navbar />
+
+        {/* Main Content */}
+        <Grid templateColumns={{ base: "1fr", md: "250px 1fr" }} gap={4} p={8} h="calc(100vh - 64px)" maxW="100%">
+          {/* Left Sidebar - Filter */}
+          <GridItem>
             <DecorativeBox>Filter</DecorativeBox>
           </GridItem>
-          <GridItem colSpan={3}>
-            <DecorativeBox>Closest Deadline</DecorativeBox>
-          </GridItem>
-          <GridItem colSpan={3}>
-            <DecorativeBox>Announcements</DecorativeBox>
-          </GridItem>
-          <GridItem rowSpan={20} colSpan={6}>
-            <DecorativeBox>
-                Your Queue
-                <TaskList/>
-            </DecorativeBox>
-          </GridItem>
-        </Grid>
 
-        </Box>
-      </Flex>
+          {/* Right Section (Grid Layout) */}
+          <Grid templateColumns="repeat(6, 1fr)" templateRows="auto 1fr" gap={4} h="100%" maxW="100%">
+            {/* Top Row: Deadlines & Announcements */}
+            <GridItem colSpan={3}>
+              <DecorativeBox>Closest Deadline</DecorativeBox>
+            </GridItem>
+            <GridItem colSpan={3}>
+              <DecorativeBox>Announcements</DecorativeBox>
+            </GridItem>
+
+            {/* Your Queue - Expands to Fill Remaining Space */}
+            <GridItem colSpan={6} h="100%">
+              <DecorativeBox h="100%" overflowY="auto">
+                Your Queue
+                <TaskList />
+              </DecorativeBox>
+            </GridItem>
+          </Grid>
+        </Grid>
+      </Box>
     </>
-    
   );
 }
 
